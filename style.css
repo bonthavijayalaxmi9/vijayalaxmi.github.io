@@ -1,0 +1,120 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #e5e7eb;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background-color: #020617;
+            padding: 20px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+       .profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #38bdf8;
+    margin-bottom: 10px;
+}
+
+
+        .profile h2 {
+            color: #38bdf8;
+        }
+
+        .profile p {
+            font-size: 14px;
+            color: #cbd5f5;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #cbd5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #1e293b;
+            color: #38bdf8;
+        }
+
+        /* Content Area */
+        .content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        section {
+            display: none;
+            animation: fade 0.4s ease-in-out;
+        }
+
+        section h1 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Default Welcome Screen */
+        #welcome {
+            display: block;
+        }
+
+        /* Show selected section */
+        section:target {
+            display: block;
+        }
+
+        /* Hide welcome when any section opens */
+        section:target ~ #welcome {
+            display: none;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
