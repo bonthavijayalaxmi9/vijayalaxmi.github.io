@@ -78,6 +78,9 @@ body{
     display:none;
     background:rgba(255,255,255,0.75) !important;
     backdrop-filter:blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 @media(max-width:992px){
@@ -88,6 +91,7 @@ body{
 .content{
     margin-left:0;
     padding:28px;
+    margin-top: 10px;
 }
 
 .mobile-nav{
@@ -125,4 +129,21 @@ body{
 
 .navbar-toggler-icon{
     background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%232f855a' stroke-width='3' stroke-linecap='round' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+section{
+    scroll-margin-top:90px;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:110px;
+}
+
+.navbar-collapse{
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top:10px;
 }
