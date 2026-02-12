@@ -1,88 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Portfolio | Vijaya Laxmi</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<div class="container">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="profile">
-            <img src="your-photo.jpg" alt="Profile Image">
-            <h2>Vijaya Laxmi</h2>
-            <p>IT Student</p>
+  <body>
+    <nav class="navbar navbar-light mobile-nav sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-semibold" href="#">Vijaya Laxmi</a>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        <a href="#welcome">🏠 Home</a>
-        <a href="#about">👩‍🎓 About</a>
-        <a href="#skills">💻 Skills</a>
-        <a href="#projects">📂 Projects</a>
-        <a href="#contact">📞 Contact</a>
+    <div class="sidebar d-flex flex-column">
+      <div class="profile text-center">
+        <img src="vijaya.jpeg" />
+        <h3>Vijaya Laxmi</h3>
+        <p class="text-secondary">IT Student</p>
+      </div>
+
+      <nav class="nav flex-column mt-4">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
     </div>
 
-    <!-- Content -->
     <div class="content">
+      <div class="glass-card text-center">
+        <h1 class="fw-bold">Hello, I'm Vijaya Laxmi 👋</h1>
 
-        <section id="about">
-            <h1>About Me</h1>
-            <p>
-                I am a student from <b>Vasavi College of Engineering</b>, currently
-                pursuing my <b>B.Tech in Information Technology</b>. I am currently
-                in my <b>2nd year</b> with strong interest in <b>Web Development</b>
-                and <b>Database Management Systems</b>.<br><br>
-                I enjoy creating efficient, user-friendly applications and
-                continuously learning new technologies.
-            </p>
-        </section>
+        <p class="mt-3">
+          Aspiring Software Developer focused on building clean, user-friendly applications.
+        </p>
+      </div>
 
-        <section id="skills">
-            <h1>Skills</h1>
-            <ul>
-                <li>HTML5 & CSS3</li>
-                <li>C Programming</li>
-                <li>Data Structures</li>
-                <li>DBMS & SQL</li>
-                <li>Java Basics</li>
-            </ul>
-        </section>
+      <div id="about" class="glass-card">
+        <h2 class="mb-3">About Me</h2>
 
-        <section id="projects">
-            <h1>Projects</h1>
-            <ul>
-                <li>Online Voting System</li>
-                <li>Student Management System</li>
-                <li>Personal Portfolio Website</li>
-            </ul>
-        </section>
+        <p>
+          I am currently pursuing B.Tech in Information Technology from
+          <b>Vasavi College of Engineering</b>. I enjoy creating user-friendly
+          applications and solving real-world problems through technology.
+        </p>
+      </div>
 
-        <section id="contact">
-            <h1>Contact</h1>
-            <p>
-                📧 Email: bonthavijayalaxmi9@gmail.com<br>
-                📱 Phone: +91 XXXXXXXXXX<br>
-                📍 India
-            </p>
-        </section>
+      <div id="skills" class="glass-card">
+        <h2>Skills</h2>
 
-        <!-- Welcome MUST be last -->
-        <section id="welcome">
-            <h1>Welcome 👋</h1>
-            <p>
-                Welcome to my personal portfolio website.<br><br>
-                This website is created using only <b>HTML and CSS</b>
-                with a modern dark theme layout. Use the navigation
-                menu on the left to explore my profile.
-            </p>
-        </section>
+        <div class="mt-3">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">Bootstrap</span>
+          <span class="skill">C</span>
+          <span class="skill">Java</span>
+          <span class="skill">DBMS</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Data Structures</span>
+        </div>
+      </div>
 
+      <div id="projects" class="glass-card">
+        <h2 class="mb-4">Projects</h2>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="glass-card project-card">
+              <h4>Online Voting System</h4>
+              <p>Secure web platform for digital voting.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="glass-card project-card">
+              <h4>Student Management</h4>
+              <p>System to manage student records efficiently.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="glass-card project-card">
+              <h4>Portfolio Website</h4>
+              <p>Responsive personal portfolio using modern UI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="glass-card">
+        <h2>Contact</h2>
+
+        <p class="mt-3">
+          📧 bonthavijayalaxmi9@gmail.com
+          <br /><br />
+          📍 India
+        </p>
+      </div>
     </div>
 
-</div>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
